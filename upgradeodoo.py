@@ -320,6 +320,9 @@ def restore_database(db_name, dump_name, core_count):
         [
             "pg_restore",
             "--no-owner",
+            "--host=db",
+            "--port=5432",
+            "--username=odoo",
             "--format",
             "d",
             dump_name,
