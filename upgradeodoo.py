@@ -315,13 +315,20 @@ def restore_database(db_name, dump_name, core_count):
     """
     logging.info("Restore the dump file '%s' as the database '%s'", dump_name, db_name)
 
-    run_command(["createdb", db_name])
+    run_command(
+        [
+        "createdb",
+        "--host=db",
+        "--port=5432",
+        "--username=odoo",
+        db_name
+        ]
+    )
     run_command(
         [
             "pg_restore",
             "--no-owner",
             "--host=db",
-            "--port=5432",
             "--username=odoo",
             "--format",
             "d",
