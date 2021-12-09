@@ -40,7 +40,7 @@ ORIGIN_DUMP_NAME = "origin.dump"
 EXPECTED_DUMP_EXTENSIONS = [".sql", ".dump", ".zip", ".sql.gz"]
 POSTGRES_TABLE_OF_CONTENTS = "toc.dat"
 FILESTORE_NAME = "filestore"
-FILESTORE_PATH = os.path.expanduser("~/.local/share/Odoo/filestore")
+FILESTORE_PATH = os.path.expanduser("/var/lib/odoo/data/filestore")
 
 DB_TIMESTAMP_FORMAT = "%Y_%m_%d_%H_%M"
 
