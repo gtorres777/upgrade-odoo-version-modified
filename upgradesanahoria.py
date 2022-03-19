@@ -297,7 +297,7 @@ def dump_database(db_name, dump_name, core_count):
             "--no-owner",
             "--host=odoo-db.clgnyaxunaji.us-east-1.rds.amazonaws.com",
             "--port=5432",
-            "--username=sanahoria",
+            "--username=sanahoria_14",
             "--format",
             "d",
             "--jobs",
@@ -320,7 +320,7 @@ def restore_database(db_name, dump_name, core_count):
         "createdb",
         "--host=odoo-db.clgnyaxunaji.us-east-1.rds.amazonaws.com",
         "--port=5432",
-        "--username=sanahoria",
+        "--username=sanahoria_14",
         db_name
         ]
     )
@@ -329,7 +329,7 @@ def restore_database(db_name, dump_name, core_count):
             "pg_restore",
             "--no-owner",
             "--host=odoo-db.clgnyaxunaji.us-east-1.rds.amazonaws.com",
-            "--username=sanahoria",
+            "--username=sanahoria_14",
             "--format",
             "d",
             dump_name,
@@ -385,7 +385,7 @@ def get_db_contract(dbname):
                 dbname,
                 "--host=odoo-db.clgnyaxunaji.us-east-1.rds.amazonaws.com",
                 "--port=5432",
-                "--username=sanahoria",
+                "--username=sanahoria_14",
                 "--no-psqlrc",
                 "--tuples-only",
                 "--command",
